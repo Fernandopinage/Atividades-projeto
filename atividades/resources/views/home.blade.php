@@ -26,8 +26,6 @@
           <label for="atividade" class="col-sm-2 col-form-label">Atividade</label>
           <div class="col-sm-10">
                 <select class="custom-select col-md-3" id="atividade">
-                        <option selected>responsável pela atividade</option>
-    
                         @foreach ($atividade as $atividade)
                         <option value="1">{{$atividade->atividade}}</option>
                         @endforeach
@@ -40,8 +38,6 @@
                 <label for="status" class="col-sm-2 col-form-label">Status</label>
                 <div class="col-sm-10">
                       <select class="custom-select col-md-3" id="atividade">
-                              <option selected>Status</option>
-          
                               @foreach ($chamado as $chamado)
                               <option value="1">{{$chamado->status}}</option>
                               @endforeach
