@@ -19,6 +19,9 @@ Route::get('/', function () {
 */
 //////////////////////////////////////////////////////////////
 //rota de acesso a tela de login
+
+use Illuminate\Http\Request;
+
 route::get('/', 'loginController@login');
 //validando login
 route::post('validando','loginController@validandoLogin');
@@ -27,6 +30,7 @@ route::post('validando','loginController@validandoLogin');
 //////////////////////////////////////////////////////////////
 //rota de acesso a tela home
 route::get('home','homeController@home');
+route::post('/validar','homeController@validarHome');
 //////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////

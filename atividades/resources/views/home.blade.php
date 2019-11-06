@@ -7,17 +7,19 @@
 
 
    <div class="">
-   <form method="post" action="">
+   <form method="post" action="/validar">
+      
+    {{ csrf_field() }}
         <div class="form-group row">
+        
           <label for="name" class="col-sm-2 col-form-label">Funcionario</label>
           <div class="col-sm-10">
-                <select class="custom-select col-md-3" id="name">
-                        <option selected>responsável pela atividade</option>
-    
+          
+                <select class="custom-select col-md-3" id="name" name="name"> 
                         @foreach ($usuario as $usuario)
-                        <option value="1">{{$usuario->name}}</option>
+                          <option >{{$usuario->name}}</option>
                         @endforeach
-    
+                  
                 </select>
           </div>
         </div>
@@ -25,9 +27,9 @@
         <div class="form-group row">
           <label for="atividade" class="col-sm-2 col-form-label">Atividade</label>
           <div class="col-sm-10">
-                <select class="custom-select col-md-3" id="atividade">
+                <select class="custom-select col-md-3" id="atividade" name="atividade">
                         @foreach ($atividade as $atividade)
-                        <option value="1">{{$atividade->atividade}}</option>
+                        <option >{{$atividade->atividade}}</option>
                         @endforeach
     
              </select>
@@ -37,14 +39,22 @@
         <div class="form-group row">
                 <label for="status" class="col-sm-2 col-form-label">Status</label>
                 <div class="col-sm-10">
-                      <select class="custom-select col-md-3" id="atividade">
-                              @foreach ($chamado as $chamado)
-                              <option value="1">{{$chamado->status}}</option>
-                              @endforeach
+                      <select class="custom-select col-md-3" id="atividade" name="status">
+                            <option value="done">Done</option>
+                            <option value="wip">WIP</option>
+                            <option value="review">Review </option>
+                            <option value="to do">To Do </option>
           
                    </select>
                 </div>
-              </div>
+        </div>
+
+        <div class="form-group row">
+                <label for="data" class="col-sm-2 col-form-label">Data Entrega</label>
+                <div class="col-sm-10">
+                      <input class="col-sm-3 col-form-label" type="date" name="data" id="data">
+                </div>
+        </div>
 
               <input type="submit" class="btn btn-outline-primary" value="Salvar">
     </form>
