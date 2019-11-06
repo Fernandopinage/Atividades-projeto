@@ -15,11 +15,15 @@ class CreateAtividadesTable extends Migration
     {
         Schema::create('atividades', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('user_id');
             $table->string('atividade');
             $table->text('descricao');
             $table->date('dataentrega');
             $table->string('status');
             $table->timestamps();
+
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
