@@ -17,6 +17,11 @@ class CreateChamadosTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('atividade_id');
+            /* */
+            $table->string('name');
+            $table->string('atividade');
+            $table->text('descricao');
+            /* */
             $table->date('dataentrega');
             $table->string('status');
             $table->timestamps();

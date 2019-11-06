@@ -22,25 +22,17 @@ class homeController extends Controller
     //-----------valida dados pegando dados do request---------------------------
 
     public function validarHome(Request $request){
-
-     return dd($request);
-
-
-    
-        $usuario = new User;
-        $usuario->name = $request->name;
-        $usuario->save();
-
-        $atividade = new atividade;
-        $atividade->atividade = $request->atividade;
-        $atividade->save();
-
+/*
         $chamado = new chamado;
-        $chamado->dataentrega = $request->dataentrega;
+        $chamado->name = $request->name;
+        $chamado->atividade = $request->atividade;
         $chamado->status = $request->status;
+        $chamado->dataentrega = $request->data;
         $chamado->save();
+*/
+        return dd($request);
 
-       
+
       
     }
 

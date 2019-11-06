@@ -11,7 +11,7 @@ class AtividadeTa extends Seeder
      */
     public function run()
     {
-        User::create([
+        atividade::create([
 
             'atividade'       =>'codificar',
             'descricao'      =>'ex de condificar'

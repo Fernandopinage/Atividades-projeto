@@ -8,6 +8,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+
+    public function chamado(){
+        return $this->hasOne('App\chamado', 'foreign_key');
+    }
+    public function atividade(){
+        return $this->hasOne('App\atividade', 'foreign_key');
+    }
     use Notifiable;
 
     /**
