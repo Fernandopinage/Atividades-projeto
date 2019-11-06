@@ -17,7 +17,7 @@
     
     <!-- --------------------------------------------------------------------------- -->
 
-        <form method="POST" action="">
+        <form method="POST" action="validando">
 
                 {{ csrf_field() }}
                 

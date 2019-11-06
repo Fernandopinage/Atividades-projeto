@@ -18,12 +18,9 @@ class CreateAtividadesTable extends Migration
             $table->unsignedInteger('user_id');
             $table->string('atividade');
             $table->text('descricao');
-            $table->date('dataentrega');
-            $table->string('status');
             $table->timestamps();
 
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            
         });
     }
 
