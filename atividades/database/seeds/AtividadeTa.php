@@ -13,8 +13,8 @@ class AtividadeTa extends Seeder
     {
         atividade::create([
 
-            'atividade'       =>'codificar',
-            'descricao'      =>'ex de condificar'
+            'atividade'       =>'text3',
+            'descricao'      =>'ex de text3'
             
         ]);
     }

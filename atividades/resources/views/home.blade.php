@@ -40,10 +40,9 @@
                 <label for="status" class="col-sm-2 col-form-label">Status</label>
                 <div class="col-sm-10">
                       <select class="custom-select col-md-3" id="atividade" name="status">
-                            <option value="done">Done</option>
-                            <option value="wip">WIP</option>
-                            <option value="review">Review </option>
-                            <option value="to do">To Do </option>
+                        @foreach ($status as $status)
+                        <option >{{$status->status}}</option>
+                        @endforeach
           
                    </select>
                 </div>
