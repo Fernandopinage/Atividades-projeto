@@ -26,16 +26,14 @@ class homeController extends Controller
 
     public function validarHome(Request $request){
 
-        $atividade = atividade::find('name');
-        $usuario = User::find('name');
-/*
+        
         $chamado = new chamado;
-        $chamado->name = $request->name;
-        $chamado->atividade = $request->atividade;
+        $chamado->user_id = $request->id;
+        $chamado->atividade_id = $request->id;
         $chamado->status = $request->status;
         $chamado->dataentrega = $request->data;
         $chamado->save();
-*/
+        
         return dd($request);
 
 

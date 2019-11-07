@@ -13,8 +13,8 @@ class AtividadeTa extends Seeder
     {
         atividade::create([
 
-            'atividade'       =>'text',
-            'descricao'       =>'ex de text',
+            'atividade'       =>'text2',
+            'descricao'       =>'ex de text2',
             'dataentrega'     =>'2019-11-06'
             
         ]);

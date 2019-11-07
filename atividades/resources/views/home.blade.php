@@ -12,12 +12,12 @@
     {{ csrf_field() }}
         <div class="form-group row">
         
-          <label for="name" class="col-sm-2 col-form-label">Funcionario</label>
+          <label for="name" class="col-sm-2 col-form-label">Funcionario matricular</label>
           <div class="col-sm-10">
           
                 <select class="custom-select col-md-3" id="name" name="name"> 
                         @foreach ($usuario as $usuario)
-                          <option >{{$usuario->name}}</option>
+                          <option >{{$usuario->id}}</option>
                         @endforeach
                   
                 </select>
@@ -29,7 +29,7 @@
           <div class="col-sm-10">
                 <select class="custom-select col-md-3" id="atividade" name="atividade">
                         @foreach ($atividade as $atividade)
-                        <option >{{$atividade->atividade}}</option>
+                        <option >{{$atividade->id}}</option>
                         @endforeach
     
              </select>

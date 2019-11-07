@@ -16,7 +16,7 @@ class UsersTa extends Seeder
         User::create([
 
             'name'       =>'test',
-            'email'      =>'test@nextem.com',
+            'email'      =>'test@nextem.com.br',
             'password'   => bcrypt('1234')
         ]);
 
