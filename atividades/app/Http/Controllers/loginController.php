@@ -19,6 +19,8 @@ class loginController extends Controller
 
     public function validandoLogin(Request $request){
 
+
+        
         //validando acesso 
         $dados = $request->only('email','password');
 
@@ -26,7 +28,7 @@ class loginController extends Controller
 
             return redirect('home');
         }else{
-            return redirect('login');
+            return redirect('/');
         }
         
     }

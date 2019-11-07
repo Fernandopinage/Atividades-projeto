@@ -20,7 +20,7 @@ Route::get('/', function () {
 //////////////////////////////////////////////////////////////
 //rota de acesso a tela de login
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\loginController;
 
 route::get('/', 'loginController@login');
 //validando login

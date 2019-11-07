@@ -15,6 +15,7 @@ class StatusTa extends Seeder
         statu::create([
 
             'status' =>'To do'
+            
         ]);
     }
 }
