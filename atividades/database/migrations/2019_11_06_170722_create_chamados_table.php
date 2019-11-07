@@ -17,20 +17,12 @@ class CreateChamadosTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('atividade_id');
-            $table->unsignedInteger('statu_id');
-            /* */
-            $table->string('name');
-            $table->string('atividade');
-            $table->text('descricao');
-            /* */
-            $table->date('dataentrega');
-            $table->string('status');
             $table->timestamps();
 
             //criando a relação entre tabelas
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('atividade_id')->references('id')->on('atividades')->onDelete('cascade');
-           // $table->foreign('statu_id')->references('id')->on('status')->onDelete('cascade');
+            
             
         });
     }
